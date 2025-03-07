@@ -10,6 +10,7 @@ import org.springframework.integration.channel.DirectChannel;
 import org.springframework.integration.mail.ImapMailReceiver;
 import org.springframework.integration.mail.MailReceiver;
 import org.springframework.integration.mail.MailReceivingMessageSource;
+import org.springframework.messaging.MessageChannel;
 
 import jakarta.mail.internet.MimeMessage;
 
@@ -25,7 +26,7 @@ public class EmailReceiverConfig {
      * DirectChannel is a SubscribableChannel.
      */
     @Bean("incomingEmailsChannel")
-    public DirectChannel defaultChannel() {
+    public MessageChannel defaultChannel() {
         DirectChannel directChannel = new DirectChannel();
         directChannel.setDatatypes(MimeMessage.class);
         return directChannel;
