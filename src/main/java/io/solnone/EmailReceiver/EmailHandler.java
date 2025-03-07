@@ -51,7 +51,9 @@ public class EmailHandler {
 
     private void logMail(MimeMessageParser parser) throws Exception {
         log.info("From: {} To: {} Subject: {}",
-                parser.getFrom(), parser.getTo(), parser.getSubject());
+                MimeUtility.decodeText(parser.getFrom()),
+                MimeUtility.decodeText(parser.getTo().get(0).toString()),
+                parser.getSubject());
         log.info("Mail content: {}", parser.getPlainContent());
     }
 
