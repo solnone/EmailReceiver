@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>io.github.solnone</groupId>
 	<artifactId>email-receiver</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<name>EmailReceiver</name>
 	<description>Email Receiver</description>
 	<url>https://github.com/solnone/EmailReceiver</url>
